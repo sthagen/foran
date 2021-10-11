@@ -5,11 +5,11 @@
 import sys
 from typing import List, Union
 
-import foran.foran
+import foran.foran as fb
 
 
 # pylint: disable=expression-not-assigned
 def main(argv: Union[List[str], None] = None) -> int:
     """Delegate processing to functional module."""
     argv = sys.argv[1:] if argv is None else argv
-    return foran.main(argv)
+    return fb.main(argv)

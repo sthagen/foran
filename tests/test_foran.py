@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=missing-docstring,unused-import,reimported
-import foran.foran
+import foran.foran as fb
 
 
 def test_main():
-    assert foran.main(['argument']) == 0
+    assert fb.main(['argument']) == 0
