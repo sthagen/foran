@@ -1,6 +1,10 @@
 # Changelog
 
-## v2021.10.11 (2021-10-11)
+## v2021.10.12
+
+* Added report stem parameter (name of report file)
+
+## v2021.10.11
 
 * Corrected missing dependency
 
