@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=expression-not-assigned,line-too-long
 """In front or behind (Foran eller bagved)? API."""
-import datetime as dti
 import os
 import sys
 from typing import List, Union
 
 from git import Repo
 
-from foran.report import report_as
+from foran.report import Report, report_as
+from foran.status import Status
 
 DEBUG_VAR = 'FORAN_DEBUG'
 DEBUG = os.getenv(DEBUG_VAR)
@@ -16,23 +16,17 @@ DEBUG = os.getenv(DEBUG_VAR)
 ENCODING = 'utf-8'
 ENCODING_ERRORS_POLICY = 'ignore'
 
-Status = dict[str, object]
 
-REPORT_STEM = 'foran-eller-bagved'
-REPORT_DTI_FORMAT = '%Y-%m-%d %H:%M:%S UTC'
+def local_commits(repo: Repo, status: Status) -> None:
+    """Yes"""
+    if not status.foran:
+        branch = repo.active_branch.name
+        status.local_commits = [rev for rev in repo.iter_commits(f'origin/{branch}..{branch}')]
 
 
-def git_status(repo: Repo) -> Status:
-    """Seed the status structure with the git status info and some defaults."""
-    branch_is_up_to_date = 'Your branch is up to date' in repo.git.status()
-    return {
-        'WHEN': dti.datetime.now(dti.timezone.utc).strftime(REPORT_DTI_FORMAT),
-        'BRANCH_NAME': repo.active_branch.name,
-        'BRANCH_FORAN': branch_is_up_to_date,
-        'BRANCH_FORAN_STR': 'UP TO DATE' if branch_is_up_to_date else 'CUSTOM',
-        'COMMIT_ID': repo.head.commit,
-        'REPORT_STEM': REPORT_STEM,
-    }
+def local_files(repo: Repo, status: Status) -> None:
+    """Sure"""
+    status.local_files = [item.a_path for item in repo.index.diff(None)]
 
 
 def main(argv: Union[List[str], None] = None) -> int:
@@ -43,6 +37,9 @@ def main(argv: Union[List[str], None] = None) -> int:
         return 2
 
     repo = Repo('.')
-    status = git_status(repo)
-    report_as(status, repo, 'text/plain')
+    status = Status(repo)
+    local_commits(repo, status)
+    local_files(repo, status)
+    report = Report()
+    report_as(status, report)
     return 0
