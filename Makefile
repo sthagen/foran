@@ -52,4 +52,5 @@ clean:
 	rm -f .coverage
 	rm -f .coverage.*
 	rm -rf build
+	rm -f foran-eller-bagved.*
 	python setup.py clean
