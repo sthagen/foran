@@ -32,10 +32,6 @@ def local_files(repo: Repo, status: Status) -> None:
 def main(argv: Union[List[str], None] = None) -> int:
     """Drive the analysis."""
     argv = argv if argv else sys.argv[1:]
-    if not argv:
-        print('ERROR arguments expected.', file=sys.stderr)
-        return 2
-
     repo = Repo('.')
     status = Status(repo)
     local_commits(repo, status)
