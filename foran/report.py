@@ -10,6 +10,7 @@ REPORT_STEM = 'foran-eller-bagved'
 
 
 class Format(Enum):
+    NONE = auto()
     TEXT = auto()
 
 

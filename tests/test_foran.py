@@ -4,4 +4,4 @@ import foran.foran as fb
 
 
 def test_main():
-    assert fb.main(['argument']) == 0
+    assert fb.main(['foran-eller-bagved.functional']) == 0

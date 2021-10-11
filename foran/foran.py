@@ -7,7 +7,7 @@ from typing import List, Union
 
 from git import Repo
 
-from foran.report import Report, report_as
+from foran.report import Format, Report, report_as
 from foran.status import Status
 
 DEBUG_VAR = 'FORAN_DEBUG'
@@ -32,10 +32,10 @@ def local_files(repo: Repo, status: Status) -> None:
 def main(argv: Union[List[str], None] = None) -> int:
     """Drive the analysis."""
     argv = argv if argv else sys.argv[1:]
+    report = Report() if not argv else Report(stem=argv[0], file_format=Format.NONE)
     repo = Repo('.')
     status = Status(repo)
     local_commits(repo, status)
     local_files(repo, status)
-    report = Report()
     report_as(status, report)
     return 0
