@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=expression-not-assigned,line-too-long
 """In front or behind (Foran eller bagved)? API."""
-import math
 import os
 import sys
-from enum import Enum, auto
 from typing import List, Union
 
 DEBUG_VAR = 'FORAN_DEBUG'
