@@ -3,7 +3,7 @@
 ## v2021.10.13
 
 * Learned to place nice when there is no remote at all
-* Reduced python minimal version requirement down to >=3.8.3
+* Reduced python minimal version requirement down to >=3.8
 
 ## v2021.10.12
 
