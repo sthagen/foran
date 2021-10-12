@@ -3,9 +3,11 @@
 """In front or behind (Foran eller bagved)? API."""
 import os
 import sys
+import warnings
 from typing import List, Union
 
 from git import Repo
+from git.exc import GitCommandError
 
 from foran.report import Format, Report, report_as
 from foran.status import Status
@@ -21,7 +23,16 @@ def local_commits(repo: Repo, status: Status) -> None:
     """Yes"""
     if not status.foran:
         branch = repo.active_branch.name
-        status.local_commits = [rev for rev in repo.iter_commits(f'origin/{branch}..{branch}')]
+        try:
+            status.local_commits = [rev for rev in repo.iter_commits(f'origin/{branch}..{branch}')]
+        except GitCommandError as ex:
+            symptom = ex.stderr.replace('\n', '')
+            if "fatal: bad revision 'origin/default..default" in symptom:
+                warning = 'No remote found, so all commit differences hypothetical'
+                status.local_commits = [warning]
+                warnings.warn(warning)
+            else:
+                raise
 
 
 def local_files(repo: Repo, status: Status) -> None:
