@@ -1,5 +1,11 @@
 # Changelog
 
+## v2021.10.14
+
+* Fixed typing use to enable ancient python 3.8.x versions 
+* Increased test coverage by adding test with non-remote repository
+* Enhanced github pages documentation
+
 ## v2021.10.13
 
 * Learned to place nice when there is no remote at all
