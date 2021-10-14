@@ -3,6 +3,7 @@
 """In front or behind (Foran eller bagved)? reporting interface."""
 import pathlib
 from enum import Enum, auto
+from typing import Tuple
 
 from foran.status import Status
 
@@ -33,7 +34,7 @@ def report_as(status: Status, report: Report) -> None:
         handle.write(''.join(generate_report(status)))
 
 
-def generate_report(status: Status) -> tuple[str, ...]:
+def generate_report(status: Status) -> Tuple[str, ...]:
     """Convoluted special trickery ... to build partially conditional report lines"""
     report = []
     report.append(f'Analysis ({status.when})\n')
