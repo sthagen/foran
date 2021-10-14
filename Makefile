@@ -40,6 +40,10 @@ testcov: test
 .PHONY: all
 all: lint mypy testcov
 
+.PHONY: fixtures
+fixtures:
+	mkdir -p tests/fixtures/non_remote && cd tests/fixtures/non_remote && git init && git branch -m default && touch emptiness && git add emptiness && git commit -m "Void"
+
 .PHONY: clean
 clean:
 	rm -rf `find . -name __pycache__`
@@ -52,5 +56,6 @@ clean:
 	rm -f .coverage
 	rm -f .coverage.*
 	rm -rf build
+	rm -rf tests/fixtures/non_remote
 	rm -f foran-eller-bagved.*
 	python setup.py clean
