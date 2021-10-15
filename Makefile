@@ -28,8 +28,12 @@ lint:
 mypy:
 	mypy foran
 
+.PHONY: fixtures
+fixtures:
+	mkdir -p tests/fixtures/non_remote && cd tests/fixtures/non_remote && git init && git branch -m default && touch emptiness && git add emptiness && git -c commit.gpgsign=false commit -m "Void"
+
 .PHONY: test
-test:
+test: clean fixtures
 	pytest --cov=foran --log-format="%(levelname)s %(message)s"
 
 .PHONY: testcov
@@ -39,10 +43,6 @@ testcov: test
 
 .PHONY: all
 all: lint mypy testcov
-
-.PHONY: fixtures
-fixtures:
-	mkdir -p tests/fixtures/non_remote && cd tests/fixtures/non_remote && git init && git branch -m default && touch emptiness && git add emptiness && git commit -m "Void"
 
 .PHONY: clean
 clean:
