@@ -1,5 +1,9 @@
 # Changelog
 
+## v2021.10.15
+
+* Experimental implementation of alerting on local staged for commit (#6)
+
 ## v2021.10.14
 
 * Fixed typing use to enable ancient python 3.8.x versions 
