@@ -35,6 +35,11 @@ def local_commits(repo: Repo, status: Status) -> None:
                 raise
 
 
+def local_staged(repo: Repo, status: Status) -> None:
+    """Truly"""
+    status.local_staged = [item.a_path for item in repo.index.diff('HEAD')]
+
+
 def local_files(repo: Repo, status: Status) -> None:
     """Sure"""
     status.local_files = [item.a_path for item in repo.index.diff(None)]
@@ -47,6 +52,7 @@ def main(argv: Union[List[str], None] = None) -> int:
     repo = Repo('.')
     status = Status(repo)
     local_commits(repo, status)
+    local_staged(repo, status)
     local_files(repo, status)
     report_as(status, report)
     return 0

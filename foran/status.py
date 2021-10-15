@@ -21,4 +21,5 @@ class Status:
         self.foran_disp = 'UP TO DATE' if branch_is_up_to_date else 'CUSTOM'
         self.commit = self._repo.head.commit
         self.local_commits: list[str] = []
+        self.local_staged: list[str] = []
         self.local_files: list[str] = []

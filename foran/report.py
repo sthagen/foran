@@ -46,6 +46,10 @@ def generate_report(status: Status) -> Tuple[str, ...]:
         report.append('List of local commits:\n')
         report.append(''.join(f' - {commit}\n' for commit in status.local_commits))
 
+    if status.local_staged:
+        report.append('List of locally staged files: \n')
+        report.append(''.join(f' - {staged_file}\n' for staged_file in status.local_staged))
+
     if status.local_files:
         report.append('List of locally modified files: \n')
         report.append(''.join(f' - {mod_file}\n' for mod_file in status.local_files))
