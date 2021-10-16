@@ -26,6 +26,10 @@ class Report:
 
 def report_as(status: Status, report: Report) -> None:
     """Side effects ..."""
+    if report.stem == 'STD_OUT':
+        print(''.join(generate_report(status)))
+        return
+
     file_extension = '.txt' if report.file_format == Format.TEXT else ''  # TODO(sthagen) HACK A DID ACK
     filepath = pathlib.Path(f'{report.stem}{file_extension}')
     filepath.parent.mkdir(parents=True, exist_ok=True)
