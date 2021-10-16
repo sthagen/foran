@@ -10,7 +10,10 @@ from foran.status import Status
 
 
 def test_main():
-    assert fb.main(['foran-eller-bagved.functional']) == 0
+    message = 'ignoring template: ignored'
+    with pytest.raises(UserWarning) as ex:
+        fb.main(['diff', '.', 'foran-eller-bagved.txt', 'ignored']) == 0
+        assert message in str(ex.value)
 
 
 def test_local_commits():
