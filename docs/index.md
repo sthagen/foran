@@ -7,6 +7,7 @@ The English "in front" may translate to the Danish "foran".
 ... and the default report stem `foran-eller-bagved` alludes to the English "In front or behind?" question which corresponds to the Danish "Foran eller bagved?"
 
 * [Installation](install.md)
+* [Use](use.md)
 * [Changes](changes.md)
 
 ## Status
