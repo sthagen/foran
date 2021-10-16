@@ -25,7 +25,7 @@ $ foran [OPTIONS] COMMAND [ARGS]...
 **Options**:
 
 * `-V, --version`: Display the foran version and exit  [default: False]
-* `--help`: Show this message and exit.
+* `-h, --help`: Show this message and exit.
 
 **Commands**:
 
@@ -53,7 +53,7 @@ $ foran diff [OPTIONS] [SOURCE]
 * `-i, --input TEXT`: [default: ]
 * `-o, --output TEXT`: [default: ]
 * `-t, --template TEXT`: [default: ]
-* `--help`: Show this message and exit.
+* `-h, --help`: Show this message and exit.
 
 ## `foran label`
 
@@ -74,7 +74,7 @@ $ foran label [OPTIONS] [SOURCE]
 * `-i, --input TEXT`: [default: ]
 * `-o, --output TEXT`: [default: ]
 * `-t, --template TEXT`: [default: ]
-* `--help`: Show this message and exit.
+* `-h, --help`: Show this message and exit.
 
 ## `foran template`
 
@@ -89,7 +89,7 @@ $ foran template [OPTIONS]
 **Options**:
 
 * `-o, --output TEXT`: [default: ]
-* `--help`: Show this message and exit.
+* `-h, --help`: Show this message and exit.
 
 ## `foran version`
 
@@ -103,5 +103,5 @@ $ foran version [OPTIONS]
 
 **Options**:
 
-* `--help`: Show this message and exit.
+* `-h, --help`: Show this message and exit.
 
