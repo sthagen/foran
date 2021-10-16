@@ -1,5 +1,11 @@
 # Changelog
 
+## v2021.10.17
+
+* Enhanced implementation of adding a path to local repository as optional CLI argument (#9)
+* Added documentation of use to github pages and python packaging (pypi.org)
+* Amended metadata for python packaging
+
 ## v2021.10.16
 
 * Experimental implementation of adding a path to local repository as optional CLI argument (#9)
