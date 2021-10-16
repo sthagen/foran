@@ -1,5 +1,12 @@
 # Changelog
 
+## v2021.10.16
+
+* Experimental implementation of adding a path to local repository as optional CLI argument (#9)
+* Added dependency typer as base for implementing the enhanced command line API
+* More tests to cover the command line API but less coverage due to expanded code (new commands)
+* Exposed console entrypoint naturally named `foran` to ease script use cases
+
 ## v2021.10.15
 
 * Experimental implementation of alerting on local staged for commit (#6)
