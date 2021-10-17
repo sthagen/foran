@@ -2,9 +2,11 @@
 
 ## v2021.10.17
 
+* Changed behavior for lists: Using list symbols `*` for commits, `+` for staged files, and `-` for modified files
 * Enhanced implementation of adding a path to local repository as optional CLI argument (#9)
 * Added documentation of use to github pages and python packaging (pypi.org)
 * Amended metadata for python packaging
+* Added more tests conrtibuting to 98 % test line coverage
 
 ## v2021.10.16
 
