@@ -3,8 +3,12 @@
 from foran.report import generate_report_list
 
 
+def test_generate_report_list_nothing_ast_empty():
+    assert generate_report_list('foo:', False, [], '*') == []
+
+
 def test_generate_report_list_ast_empty():
-    assert generate_report_list('foo:', True, [], '*') == ['foo:\n']
+    assert generate_report_list('', True, [], '*') == ['\n']
 
 
 def test_generate_report_list_default_single():
