@@ -42,20 +42,20 @@ def callback(
         raise typer.Exit()
 
 
-def _classify_template(template: str) -> Template:
+def classify_template(template: str) -> Template:
     """
     Process the received template and return the classification
     """
     if not template:
         return Template.NONE
 
-    if '{{' in template:
+    if '{{' in str(template):
         return Template.JINJA_STRING
 
-    if '{' in template:
+    if '{' in str(template):
         return Template.F_STRING
 
-    if pathlib.Path(template).is_file():
+    if pathlib.Path(str(template)).is_file():
         return Template.JINJA_PATH
 
     return Template.STRING
@@ -69,7 +69,7 @@ def diff_repo(
     template: str = typer.Option('', '-t', '--template'),
 ) -> int:
     """
-    Diff the local against the remote repository state
+    Diff the local against the remote repository state  (no template handling yet)
     """
     repo_root = input if input else source
     target = 'STD_OUT' if not str(output) else str(output)
@@ -84,7 +84,7 @@ def label_repo(
     template: str = typer.Option('', '-t', '--template'),
 ) -> int:
     """
-    Labels the local repository state
+    Labels the local repository state (no template handling yet)
     """
     repo_root = input if input else source
     target = 'STD_OUT' if not str(output) else str(output)
@@ -97,7 +97,7 @@ def app_template(output: str = typer.Option('', '-o', '--output')) -> None:
     Output an example jinja template representing the defaults
     """
     target = 'STD_OUT' if not output else output
-    typer.echo(f'Exampled generated per {target}')
+    typer.echo(f'Example template generated per {target}')
 
 
 @app.command('version')
