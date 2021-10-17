@@ -3,7 +3,7 @@
 """In front or behind (Foran eller bagved)? reporting interface."""
 import pathlib
 from enum import Enum, auto
-from typing import Tuple
+from typing import List, Tuple
 
 from foran.status import Status
 
@@ -38,6 +38,16 @@ def report_as(status: Status, report: Report) -> None:
         handle.write(''.join(generate_report(status)))
 
 
+def generate_report_list(label: str, anything: bool, entries: List[str], list_symbol: str = '*') -> list[str]:
+    """Generic list report generator."""
+    if not anything:
+        return []
+    if not entries:
+        return [f'{label}\n']
+
+    return [f'{label}\n'] + [''.join(f' {list_symbol} {entry}\n' for entry in entries)]
+
+
 def generate_report(status: Status) -> Tuple[str, ...]:
     """Convoluted special trickery ... to build partially conditional report lines"""
     report = []
@@ -46,16 +56,8 @@ def generate_report(status: Status) -> Tuple[str, ...]:
     report.append(f'Branch   ({status.branch})\n')
     report.append(f'Commit   ({status.commit})\n')
 
-    if not status.foran:
-        report.append('List of local commits:\n')
-        report.append(''.join(f' - {commit}\n' for commit in status.local_commits))
-
-    if status.local_staged:
-        report.append('List of locally staged files: \n')
-        report.append(''.join(f' - {staged_file}\n' for staged_file in status.local_staged))
-
-    if status.local_files:
-        report.append('List of locally modified files: \n')
-        report.append(''.join(f' - {mod_file}\n' for mod_file in status.local_files))
+    report += generate_report_list('List of local commits:', not status.foran, status.local_commits, '*')
+    report += generate_report_list('List of locally staged files:', bool(status.local_staged), status.local_staged, '+')
+    report += generate_report_list('List of locally modified files:', bool(status.local_files), status.local_files, '-')
 
     return tuple(report)
