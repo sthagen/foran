@@ -2,6 +2,7 @@
 # pylint: disable=expression-not-assigned,line-too-long
 """In front or behind (Foran eller bagved)? API."""
 import os
+import pathlib
 import warnings
 from typing import List, Union
 
@@ -52,13 +53,20 @@ def main(argv: Union[List[str], None] = None) -> int:
         return 2
 
     if argv[0] not in ('diff', 'label'):
-        warnings.warn(f'received unknown command: {argv[0]}')
+        warnings.warn('received unknown command')
         return 2
 
     command, repo_root, target, template = argv
+
+    if not pathlib.Path(str(repo_root)).is_dir():
+        warnings.warn('repository root is no directory')
+        return 1
+
+    if template and target != 'STD_OUT':
+        warnings.warn('templates not yet implemented')
+
     report = Report(stem=target, file_format=Format.NONE)
-    if target != 'STD_OUT':
-        warnings.warn(f'ignoring template: {template}')
+
     repo = Repo(repo_root)
     status = Status(repo)
     if command == 'diff':
