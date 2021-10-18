@@ -1,5 +1,12 @@
 # foran
 
+[![license](https://img.shields.io/github/license/sthagen/foran.svg?style=flat)](https://github.com/sthagen/foran/blob/default/LICENSE)
+[![version](https://img.shields.io/pypi/v/foran.svg?style=flat)](https://pypi.python.org/pypi/foran/)
+[![downloads](https://img.shields.io/pypi/dm/foran.svg?style=flat)](https://pypi.python.org/pypi/foran/)
+[![wheel](https://img.shields.io/pypi/wheel/foran.svg?style=flat)](https://pypi.python.org/pypi/foran/)
+[![supported-versions](https://img.shields.io/pypi/pyversions/foran.svg?style=flat)](https://pypi.python.org/pypi/foran/)
+[![supported-implementations](https://img.shields.io/pypi/implementation/foran.svg?style=flat)](https://pypi.python.org/pypi/foran/)
+
 Answering if a local is in front of its remote.
 
 The English "in front" may translate to the Danish "foran".
