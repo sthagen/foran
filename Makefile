@@ -12,6 +12,11 @@ install:
 install-all: install
 	pip install -r tests/requirements-dev.txt
 
+.PHONY: init
+init:
+	pip install -r tests/requirements.txt
+	pip install -r tests/requirements-dev.txt
+
 .PHONY: isort
 format:
 	$(isort)
