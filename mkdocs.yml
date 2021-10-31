@@ -1,0 +1,58 @@
+site_name: Foran
+site_description: Answering if a local is in front of its remote.
+
+theme:
+  name: 'material'
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/sthagen/foran
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/r/shagen/foran
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/shage
+
+copyright: Copyright &copy; 2021 Stefan Hagen under the MIT license
+
+repo_name: sthagen/foran
+repo_url: https://github.com/sthagen/foran
+edit_uri: ""
+
+plugins:
+  - search
+  - mkdocstrings
+
+nav:
+  - Introduction: 'index.md'
+  - Install: 'install.md'
+  - Usage: 'usage.md'
+  - Changes: 'changes.md'
+
+markdown_extensions:
+  - mkautodoc
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+extra_javascript:
+
