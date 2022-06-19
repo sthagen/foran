@@ -39,7 +39,7 @@ fixtures:
 
 .PHONY: test
 test: clean fixtures
-	pytest --asyncio-mode=strict --cov=foran --log-format="%(levelname)s %(message)s"
+	pytest --asyncio-mode=strict --cov=foran --cov-report term-missing:skip-covered --cov-branch --log-format="%(levelname)s %(message)s"
 
 .PHONY: testcov
 testcov: test
