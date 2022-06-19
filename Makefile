@@ -39,7 +39,7 @@ fixtures:
 
 .PHONY: test
 test: clean fixtures
-	pytest --cov=foran --log-format="%(levelname)s %(message)s"
+	pytest --asyncio-mode=strict --cov=foran --log-format="%(levelname)s %(message)s"
 
 .PHONY: testcov
 testcov: test
