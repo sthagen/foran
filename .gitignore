@@ -134,3 +134,4 @@ dmypy.json
 foran-eller-bagved.*
 local_publi.sh
 tests/fixtures
+local_*
