@@ -17,7 +17,7 @@ init:
 	pip install -r tests/requirements.txt
 	pip install -r tests/requirements-dev.txt
 
-.PHONY: isort
+.PHONY: format
 format:
 	$(isort)
 	$(black)
