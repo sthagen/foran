@@ -1,21 +1,21 @@
 .DEFAULT_GOAL := all
-isort = isort foran tests
-black = black -S -l 120 --target-version py39 foran tests
+isort = isort foran test
+black = black -S -l 120 --target-version py39 foran test
 
 .PHONY: install
 install:
 	pip install -U pip wheel
-	pip install -r tests/requirements.txt
+	pip install -r test/requirements.txt
 	pip install -U .
 
 .PHONY: install-all
 install-all: install
-	pip install -r tests/requirements-dev.txt
+	pip install -r test/requirements-dev.txt
 
 .PHONY: init
 init:
-	pip install -r tests/requirements.txt
-	pip install -r tests/requirements-dev.txt
+	pip install -r test/requirements.txt
+	pip install -r test/requirements-dev.txt
 
 .PHONY: format
 format:
@@ -25,7 +25,7 @@ format:
 .PHONY: lint
 lint:
 	python setup.py check -ms
-	flake8 foran/ tests/
+	flake8 foran/ test/
 	$(isort) --check-only --df
 	$(black) --check --diff
 
@@ -35,7 +35,7 @@ mypy:
 
 .PHONY: fixtures
 fixtures:
-	mkdir -p tests/fixtures/non_remote && cd tests/fixtures/non_remote && git init && git branch -m default && touch emptiness && git add emptiness && git -c commit.gpgsign=false commit -m "Void"
+	mkdir -p test/fixtures/non_remote && cd test/fixtures/non_remote && git init && git branch -m default && touch emptiness && git add emptiness && git -c commit.gpgsign=false commit -m "Void"
 
 .PHONY: test
 test: clean fixtures
@@ -61,6 +61,6 @@ clean:
 	rm -f .coverage
 	rm -f .coverage.*
 	rm -rf build
-	rm -rf tests/fixtures/non_remote
+	rm -rf test/fixtures/non_remote
 	rm -f foran-eller-bagved.*
 	python setup.py clean
