@@ -64,12 +64,12 @@ def test_local_commits_some():
 
 def test_local_commits_no_repo():
     with pytest.raises(InvalidGitRepositoryError):
-        _ = Repo('tests')
+        _ = Repo('test')
         # We cannot currently really probe for a git repo that raises GitCommandError
 
 
 def test_local_commits_no_remote():
-    path_to_non_remote = pathlib.Path('tests', 'fixtures', 'non_remote')
+    path_to_non_remote = pathlib.Path('test', 'fixtures', 'non_remote')
     repo = Repo(path_to_non_remote)
     status = Status(repo)
     status.foran = False
