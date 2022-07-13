@@ -1,2 +1,2 @@
 GitPython==3.1.27
-typer==0.5.0
+typer==0.6.1
