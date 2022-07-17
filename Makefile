@@ -64,3 +64,4 @@ clean:
 	rm -rf test/fixtures/non_remote
 	rm -f foran-eller-bagved.*
 	python setup.py clean
+	@rm -fr site/*
