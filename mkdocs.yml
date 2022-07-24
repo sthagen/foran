@@ -47,6 +47,7 @@ nav:
   - Install: 'install.md'
   - Usage: 'usage.md'
   - Changes: 'changes.md'
+  - Test Coverage: https://codes.dilettant.life/coverage/foran
 
 markdown_extensions:
   - mkautodoc
