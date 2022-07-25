@@ -55,7 +55,7 @@ clocal:
 	rm -f foran-eller-bagved.*
 
 .PHONY: clean
-clean:
+clean: clocal
 	@rm -rf `find . -name __pycache__`
 	@rm -f `find . -type f -name '*.py[co]' `
 	@rm -f `find . -type f -name '*~' `
