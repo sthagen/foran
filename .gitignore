@@ -135,3 +135,4 @@ foran-eller-bagved.*
 local_publi.sh
 tests/fixtures
 local_*
+.vscode/
