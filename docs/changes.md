@@ -1,5 +1,13 @@
 # Changelog
 
+## 2022.7.25
+
+* Bumped dependencies for development and test
+* Moved documentation to https://codes.dilettant.life/docs/foran
+* Moved tracker to https://todo.sr.ht/~sthagen/foran
+* Moved normative source repo to https://git.sr.ht/~sthagen/foran
+* Added test coverage link to documentation and coverage to https://codes.dilettant.life/coverage/foran
+
 ## v2021.10.17
 
 * Changed behavior for lists: Using list symbols `*` for commits, `+` for staged files, and `-` for modified files

@@ -1,16 +1,7 @@
-# Use
+# Usage
 
-<!-- MarkdownTOC -->
 
-- `foran`
-	- `foran diff`
-	- `foran label`
-	- `foran template`
-	- `foran version`
-
-<!-- /MarkdownTOC -->
-
-# `foran`
+## `foran`
 
 In front or behind (Foran eller bagved)?
 
@@ -34,7 +25,7 @@ $ foran [OPTIONS] COMMAND [ARGS]...
 * `template`: Output an example jinja template representing...
 * `version`: Display the foran version and exit
 
-## `foran diff`
+### `foran diff`
 
 Diff the local against the remote repository state
 
@@ -55,7 +46,7 @@ $ foran diff [OPTIONS] [SOURCE]
 * `-t, --template TEXT`: [default: ]
 * `-h, --help`: Show this message and exit.
 
-## `foran label`
+### `foran label`
 
 Labels the local repository state
 
@@ -76,7 +67,7 @@ $ foran label [OPTIONS] [SOURCE]
 * `-t, --template TEXT`: [default: ]
 * `-h, --help`: Show this message and exit.
 
-## `foran template`
+### `foran template`
 
 Output an example jinja template representing the defaults
 
@@ -91,7 +82,7 @@ $ foran template [OPTIONS]
 * `-o, --output TEXT`: [default: ]
 * `-h, --help`: Show this message and exit.
 
-## `foran version`
+### `foran version`
 
 Display the foran version and exit
 
