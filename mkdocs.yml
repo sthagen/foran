@@ -26,16 +26,14 @@ extra:
   generator: false
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/sthagen/foran
-    - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/r/shagen/foran
+      link: https://git.sr.ht/~sthagen/foran
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/shage
 
-copyright: Copyright &copy; 2021 Stefan Hagen under the MIT license
+copyright: Copyright &copy; 2022 Stefan Hagen under the MIT license
 
-repo_name: sthagen/foran
-repo_url: https://github.com/sthagen/foran
+repo_name: ~sthagen/foran
+repo_url: https://git.sr.ht/~sthagen/foran
 edit_uri: ""
 
 plugins:
