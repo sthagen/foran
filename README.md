@@ -21,7 +21,7 @@ User and developer [documentation of foran](https://codes.dilettant.life/docs/fo
 
 ## Bug Tracker
 
-Feature requests and bug reports are bested entered in the [todos of foran](https://todo.sr.ht/~sthagen/foran).
+Feature requests and bug reports are best entered in the [todos of foran](https://todo.sr.ht/~sthagen/foran).
 
 ## Primary Source repository
 
