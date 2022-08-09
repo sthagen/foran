@@ -16,7 +16,7 @@ The English "in front" may translate to the Danish "foran".
 
 ## Bug Tracker
 
-Feature requests and bug reports are bested entered in the [todos of foran](https://todo.sr.ht/~sthagen/foran).
+Feature requests and bug reports are best entered in the [todos of foran](https://todo.sr.ht/~sthagen/foran).
 
 ## Primary Source repository
 
