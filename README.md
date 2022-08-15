@@ -14,7 +14,6 @@ The English "in front" may translate to the Danish "foran".
 
 ... and the default report stem `foran-eller-bagved` alludes to the English "In front or behind?" question which corresponds to the Danish "Foran eller bagved?"
 
-
 ## Documentation
 
 User and developer [documentation of foran](https://codes.dilettant.life/docs/foran).
@@ -25,8 +24,12 @@ Feature requests and bug reports are best entered in the [todos of foran](https:
 
 ## Primary Source repository
 
-The primary source repository of [foran is at sourcehut](https://git.sr.ht/~sthagen/foran)
-a collection of tools useful for software development.
+The primary source of `foran` lives somewhere on a mountain in Central Switzerland.
+But, we use decentralized version control (git), so any clone can become the source to everyone's benefit, no central only code.
+Anyway, the preferred public clones of `foran` are:
+
+* [on codeberg](https://codeberg.org/sthagen/foran) - a collaboration platform and git hosting for free and open source software, content and projects.
+* [at sourcehut](https://git.sr.ht/~sthagen/foran) - a collection of tools useful for software development.
 
 ## Status
 
