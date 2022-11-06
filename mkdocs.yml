@@ -3,6 +3,9 @@ site_description: Answering if a local is in front of its remote.
 
 theme:
   name: 'material'
+  features:
+    - navigation.expand
+    - toc.integrate
   palette:
     # Light mode
     - media: "(prefers-color-scheme: light)"
