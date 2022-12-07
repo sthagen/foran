@@ -131,8 +131,14 @@ dmypy.json
 # Typical local development artifacts
 *~
 .idea
-foran-eller-bagved.*
+*.log
 local_publi.sh
-tests/fixtures
 local_*
+local/
+gist/
 .vscode/
+current-bandit.json
+
+# local specifics of this repo
+foran-eller-bagved.*
+
