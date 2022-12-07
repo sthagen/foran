@@ -11,24 +11,15 @@ from foran.status import Status
 
 
 def test_main_empty():
-    message = 'received wrong number of arguments'
-    with pytest.raises(UserWarning) as ex:
-        fb.main([]) == 2
-        assert message in str(ex.value)
+    assert fb.main([]) == 2
 
 
 def test_main_few():
-    message = 'received wrong number of arguments'
-    with pytest.raises(UserWarning) as ex:
-        fb.main(['diff', '.', 'would_be_here']) == 2
-        assert message in str(ex.value)
+    assert fb.main(['diff', '.', 'would_be_here']) == 2
 
 
 def test_main_unknown_command():
-    message = 'received unknown command'
-    with pytest.raises(UserWarning) as ex:
-        fb.main(['unknown', '.', 'would_be_here', '']) == 2
-        assert message in str(ex.value)
+    assert fb.main(['unknown', '.', 'would_be_here', '']) == 2
 
 
 def test_main_diff():
@@ -40,10 +31,7 @@ def test_main_label():
 
 
 def test_main_template():
-    message = 'ignoring template: ignored'
-    with pytest.raises(UserWarning) as ex:
-        fb.main(['diff', '.', 'foran-eller-bagved.txt', 'ignored']) == 0
-        assert message in str(ex.value)
+    assert fb.main(['diff', '.', 'foran-eller-bagved.txt', 'ignored']) == 0
 
 
 def test_local_commits_none():
@@ -74,7 +62,5 @@ def test_local_commits_no_remote():
     status = Status(repo)
     status.foran = False
     message = 'No remote found, so all commit differences hypothetical'
-    with pytest.raises(UserWarning) as ex:
-        fb.local_commits(repo, status)
-        assert status.local_commits == [message]
-        assert message in str(ex.value)
+    fb.local_commits(repo, status)
+    assert status.local_commits == [message]

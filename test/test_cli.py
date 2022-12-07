@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-# pylint: disable=missing-docstring,unused-import,reimported
 import pytest
 from typer.testing import CliRunner
 
@@ -25,55 +23,40 @@ def test_app_template():
 
 
 def test_cli_main():
-    message = 'ignoring template: ignored'
-    with pytest.raises(UserWarning) as ex:
-        cli.main(['diff', '.', 'foran-eller-bagved.txt', 'ignored']) == 0
-        assert message in str(ex.value)
+    assert cli.main(['diff', '.', 'foran-eller-bagved.txt', 'ignored']) == 0
 
 
 def test_cli_diff_path():
-    message = 'ignoring template: ignored'
-    with pytest.raises(UserWarning) as ex:
-        cli.diff_repo(source=cli.CWD, output='foran-eller-bagved.txt') == 0
-        assert message in str(ex.value)
+    assert cli.diff_repo(source=cli.CWD, output='foran-eller-bagved.txt') == 1
 
 
 def test_cli_diff_stdout():
-    message = 'ignoring template: ignored'
-    with pytest.raises(UserWarning) as ex:
-        cli.diff_repo(source=cli.CWD) == 0
-        assert message in str(ex.value)
+    assert cli.diff_repo(source=cli.CWD) == 1
 
 
 def test_cli_label_path():
-    message = 'ignoring template: ignored'
-    with pytest.raises(UserWarning) as ex:
-        cli.label_repo(source=cli.CWD, output='foran-eller-bagved.txt') == 0
-        assert message in str(ex.value)
+    assert cli.label_repo(source=cli.CWD, output='foran-eller-bagved.txt') == 1
 
 
 def test_cli_label_stdout():
-    message = 'ignoring template: ignored'
-    with pytest.raises(UserWarning) as ex:
-        cli.label_repo(source=cli.CWD) == 0
-        assert message in str(ex.value)
+    assert cli.label_repo(source=cli.CWD) == 1
 
 
 def test_cli_classify_template_empty():
-    cli.classify_template('') == Template.NONE
+    assert cli.classify_template('') == Template.NONE
 
 
 def test_cli_classify_template_jinja_string():
-    cli.classify_template('{{ JINJA }}') == Template.JINJA_STRING
+    assert cli.classify_template('{{ JINJA }}') == Template.JINJA_STRING
 
 
 def test_cli_classify_template_f_string():
-    cli.classify_template('{f_string}') == Template.F_STRING
+    assert cli.classify_template('{f_string}') == Template.F_STRING
 
 
 def test_cli_classify_template_jinja_path():
-    cli.classify_template('README.md') == Template.JINJA_PATH
+    assert cli.classify_template('README.md') == Template.JINJA_PATH
 
 
 def test_cli_classify_template_string():
-    cli.classify_template('NOTHING_ELSE_MATTERS') == Template.STRING
+    assert cli.classify_template('NOTHING_ELSE_MATTERS') == Template.STRING
