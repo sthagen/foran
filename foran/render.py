@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-# pylint: disable=expression-not-assigned,line-too-long
 """In front or behind (Foran eller bagved)? rendering interface for templates."""
 from enum import Enum, auto
 

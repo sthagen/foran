@@ -1,13 +1,11 @@
-# -*- coding: utf-8 -*-
-# pylint: disable=expression-not-assigned,line-too-long
 """In front or behind (Foran eller bagved)? API."""
 import os
 import pathlib
 import warnings
 from typing import List, Union
 
-from git import Repo
 from git.exc import GitCommandError
+from git.repo import Repo
 
 from foran.report import Format, Report, report_as
 from foran.status import Status
@@ -67,7 +65,7 @@ def main(argv: Union[List[str], None] = None) -> int:
 
     report = Report(stem=target, file_format=Format.NONE)
 
-    repo = Repo(repo_root)
+    repo = Repo(repo_root, search_parent_directories=True)
     status = Status(repo)
     if command == 'diff':
         local_commits(repo, status)

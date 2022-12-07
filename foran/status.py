@@ -1,9 +1,7 @@
-# -*- coding: utf-8 -*-
-# pylint: disable=expression-not-assigned,line-too-long
 """In front or behind (Foran eller bagved)? status structure."""
 import datetime as dti
 
-from git import Repo
+from git.repo import Repo
 
 STATUS_DTI_FORMAT = '%Y-%m-%d %H:%M:%S UTC'
 

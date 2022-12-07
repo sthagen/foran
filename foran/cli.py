@@ -1,6 +1,3 @@
-#! /usr/bin/env python
-# -*- coding: utf-8 -*-
-# pylint: disable=line-too-long
 """Commandline API gateway for foran."""
 import pathlib
 import sys
