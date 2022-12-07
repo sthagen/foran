@@ -59,7 +59,7 @@ def test_local_commits_some():
     status = Status(repo)
     status.foran = False
     fb.local_commits(repo, status)
-    assert len(status.local_commits) == 6
+    assert len(status.local_commits) >= 216
 
 
 def test_local_commits_no_repo():
