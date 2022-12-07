@@ -2,6 +2,8 @@
 
 ## 2022.12.7
 
+* Added a baseline
+* Added SBOM and third-party documentation
 * Bumped python version range to 3.9-3.11
 * Fixed top level only constraint - now any current working dir inside a git tree will work
 * Removed some cruft from early script, encoding, and taming the linter days
