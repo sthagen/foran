@@ -1,6 +1,9 @@
 .DEFAULT_GOAL := all
 isort = isort foran test
 black = black -S -l 120 --target-version py39 foran test
+flake8 = flake8 --ignore E203,N801 foran test
+pytest = pytest --asyncio-mode=strict --cov=foran --cov-report term-missing:skip-covered --cov-branch --log-format="%(levelname)s %(message)s"
+types = mypy foran
 
 .PHONY: install
 install:
@@ -25,21 +28,17 @@ format:
 .PHONY: lint
 lint:
 	python setup.py check -ms
-	flake8 foran/ test/
+	@echo Disabled $(flake8)
 	$(isort) --check-only --df
 	$(black) --check --diff
 
-.PHONY: mypy
-mypy:
-	mypy foran
-
-.PHONY: fixtures
-fixtures:
-	mkdir -p test/fixtures/non_remote && cd test/fixtures/non_remote && git init && git branch -m default && touch emptiness && git add emptiness && git -c commit.gpgsign=false commit -m "Void"
+.PHONY: types
+types:
+	$(types)
 
 .PHONY: test
 test: clean fixtures
-	pytest --asyncio-mode=strict --cov=foran --cov-report term-missing:skip-covered --cov-branch --log-format="%(levelname)s %(message)s"
+	$(pytest)
 
 .PHONY: testcov
 testcov: test
@@ -47,7 +46,11 @@ testcov: test
 	@coverage html
 
 .PHONY: all
-all: lint mypy testcov
+all: lint types testcov
+
+.PHONY: fixtures
+fixtures: clocal
+	mkdir -p test/fixtures/non_remote && cd test/fixtures/non_remote && git init && git branch -m default && touch emptiness && git add emptiness && git -c commit.gpgsign=false commit -m "Void"
 
 .PHONY: clocal
 clocal:
