@@ -1,6 +1,7 @@
 # foran
 
-Answering if a local is in front of its remote.
+In front or behind (Danish: foran eller bagved)? Answering the question if a local repository status is in front of or behind its remote.
+
 
 [License: MIT](https://git.sr.ht/~sthagen/foran/tree/default/item/LICENSE)
 
