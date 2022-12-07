@@ -1,5 +1,5 @@
-site_name: Foran
-site_description: Answering if a local is in front of its remote.
+site_name: foran
+site_description: "In front or behind (Danish: foran eller bagved)? Answering the question if a local repository status is in front of or behind its remote."
 
 theme:
   name: 'material'
@@ -50,6 +50,7 @@ nav:
   - Usage: 'usage.md'
   - Changes: 'changes.md'
   - Test Coverage: https://codes.dilettant.life/coverage/foran
+  - Third-Party: 'third-party/README.md'
 
 markdown_extensions:
   - abbr
