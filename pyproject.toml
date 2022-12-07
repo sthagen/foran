@@ -2,7 +2,80 @@
 requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
+[project]
+name = "foran"
+version = "2022.12.7"
+description = "In front or behind (Danish: foran eller bagved)? Answering the question if a local repository status is in front of or behind its remote."
+readme = "README.md"
+authors = [{ name = "Stefan Hagen", email = "stefan@hagen.link" }]
+maintainers = [{ name = "Stefan Hagen", email = "stefan@hagen.link" }]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.9",
+]
+keywords = ["git", "developer-tools"]
+dependencies = [
+    "GitPython >= 3.1.29",
+    "typer >= 0.7.0",
+]
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+dev = ["black", "coverage", "flake8", "hypothesis", "mypy", "pytest", "pytest-cov", "pytest-flake8"]
+
+[project.urls]
+Homepage = "https://git.sr.ht/~sthagen/foran"
+Bug-Tracker = "https://todo.sr.ht/~sthagen/foran"
+Documentation = "https://codes.dilettant.life/docs/foran"
+Source-Code = "https://git.sr.ht/~sthagen/foran"
+Test-Coverage = "https://codes.dilettant.life/coverage/foran"
+
+[project.scripts]
+foran = "foran.cli:app"
+
+[tool.setuptools.packages.find]
+include = ["foran"]
+exclude = ["test*"]
+
+[bdist_wheel]
+universal = true
+
 [tool.black]
 line-length = 120
-skip-string-normalization = "True"
+skip-string-normalization = true
 target-version = ["py39", "py310", "py311"]
+
+[tool.coverage.run]
+branch = true
+
+[tool.coverage.report]
+precision = 2
+exclude_lines = [
+    "pragma: no cover",
+    "raise NotImplementedError",
+    "if TYPE_CHECKING:",
+    "@overload",
+]
+omit = [
+    "*/__main__.py",
+]
+
+[tool.isort]
+line_length = 120
+known_first_party = "foran"
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+combine_as_imports = true
+
+[tool.mypy]
+strict = true
+implicit_reexport = true
+
+[tool.pytest]
+testpaths = "test"
+filterwarnings = "error"
