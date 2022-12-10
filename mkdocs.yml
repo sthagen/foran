@@ -3,6 +3,8 @@ site_description: "In front or behind (Danish: foran eller bagved)? Answering th
 
 theme:
   name: 'material'
+  logo: assets/logo.png
+  favicon: images/favicon.ico
   features:
     - navigation.expand
     - toc.integrate
