@@ -1,9 +1,10 @@
-# foran
+# Foran
 
 In front or behind (Danish: foran eller bagved)? Answering the question if a local repository status is in front of or behind its remote.
 
-
 [License: MIT](https://git.sr.ht/~sthagen/foran/tree/default/item/LICENSE)
+
+Third party dependencies are documented in the folder [third-party](third-party/README.md).
 
 [![version](https://img.shields.io/pypi/v/foran.svg?style=flat)](https://pypi.python.org/pypi/foran/)
 [![downloads](https://pepy.tech/badge/foran/month)](https://pepy.tech/project/foran)
