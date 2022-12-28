@@ -1,8 +1,8 @@
 # Third Party Dependencies
 
 <!--[[[fill sbom_sha256()]]]-->
-The [SBOM in CycloneDX v1.4 JSON format](https://github.com/sthagen/pilli/blob/default/sbom.json) with SHA256 checksum ([cf197236 ...](https://raw.githubusercontent.com/sthagen/pilli/default/sbom.json.sha256 "sha256:cf197236806d53cd0dfd404e4c6e2adb6bd27de872febd63e7a3e82e3eeec9cd")).
-<!--[[[end]]] (checksum: 945d3c8d4ca827f69c45f3df70420463)-->
+The [SBOM in CycloneDX v1.4 JSON format](https://git.sr.ht/~sthagen/foran/blob/default/sbom.json) with SHA256 checksum ([e29e6afc ...](https://git.sr.ht/~sthagen/foran/blob/default/sbom.json.sha256 "sha256:e29e6afc91510fe4cdc14c95b5e7f661238c1de5f7cd5b86be4b6191d1c2170b")).
+<!--[[[end]]] (checksum: e4b587b416f81e5ae27f0abe807b5020)-->
 ## Licenses 
 
 JSON files with complete license info of: [direct dependencies](direct-dependency-licenses.json) | [all dependencies](all-dependency-licenses.json)
@@ -39,9 +39,9 @@ Base graphviz file in dot format: [Trees of the direct dependencies](package-dep
 <!--[[[fill dependency_tree_console_text()]]]-->
 ````console
 GitPython==3.1.29
-  - gitdb [required: >=4.0.1,<5, installed: 4.0.9]
+  - gitdb [required: >=4.0.1,<5, installed: 4.0.10]
     - smmap [required: >=3.0.1,<6, installed: 5.0.0]
 typer==0.7.0
   - click [required: >=7.1.1,<9.0.0, installed: 8.1.3]
 ````
-<!--[[[end]]] (checksum: eb957422a3932d11ba2645e313afbc0f)-->
+<!--[[[end]]] (checksum: 467bf841a075a0da5a2854639a6ee7f7)-->
