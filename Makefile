@@ -1,7 +1,6 @@
 .DEFAULT_GOAL := all
-isort = isort foran test
 black = black -S -l 120 --target-version py39 foran test
-flake8 = flake8 --ignore E203,N801 foran test
+lint = ruff foran test
 pytest = pytest --asyncio-mode=strict --cov=foran --cov-report term-missing:skip-covered --cov-branch --log-format="%(levelname)s %(message)s"
 types = mypy foran
 
@@ -22,14 +21,13 @@ init:
 
 .PHONY: format
 format:
-	$(isort)
+	$(lint) --fix
 	$(black)
 
 .PHONY: lint
 lint:
 	python setup.py check -ms
-	@echo Disabled $(flake8)
-	$(isort) --check-only --df
+	$(lint) --diff
 	$(black) --check --diff
 
 .PHONY: types
