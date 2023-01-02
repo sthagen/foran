@@ -1,14 +1,15 @@
 .DEFAULT_GOAL := all
-black = black -S -l 120 --target-version py39 foran test
-lint = ruff foran test
-pytest = pytest --asyncio-mode=strict --cov=foran --cov-report term-missing:skip-covered --cov-branch --log-format="%(levelname)s %(message)s"
-types = mypy foran
+package = foran
+black = black -S -l 120 --target-version py311 $(package) test
+lint = ruff $(package) test
+pytest = pytest --asyncio-mode=strict --cov=$(package) --cov-report term-missing:skip-covered --cov-branch --log-format="%(levelname)s %(message)s"
+types = mypy $(package)
 
 .PHONY: install
 install:
 	pip install -U pip wheel
 	pip install -r test/requirements.txt
-	pip install -U .
+	pip install -e . --config-settings editable_mode=strict
 
 .PHONY: install-all
 install-all: install
@@ -26,7 +27,7 @@ format:
 
 .PHONY: lint
 lint:
-	python setup.py check -ms
+	validate-pyproject pyproject.toml
 	$(lint) --diff
 	$(black) --check --diff
 
@@ -53,16 +54,16 @@ sbom:
 
 .PHONY: version
 version:
-	@cog -I. -P -c -r --check --markers="[[fill ]]] [[[end]]]" -p "from gen_version import *" foran/__init__.py
+	@cog -I. -P -c -r --check --markers="[[fill ]]] [[[end]]]" -p "from gen_version import *" $(package)/__init__.py
 
 .PHONY: secure
 secure:
-	@bandit --output current-bandit.json --baseline baseline-bandit.json --format json --recursive --quiet --exclude ./test,./build foran
+	@bandit --output current-bandit.json --baseline baseline-bandit.json --format json --recursive --quiet --exclude ./test,./build $(package)
 	@diff -Nu {baseline,current}-bandit.json; printf "^ Only the timestamps ^^ ^^ ^^ ^^ ^^ ^^ should differ. OK?\n"
 
 .PHONY: baseline
 baseline:
-	@bandit --output baseline-bandit.json --format json --recursive --quiet --exclude ./test,./build foran
+	@bandit --output baseline-bandit.json --format json --recursive --quiet --exclude ./test,./build $(package)
 	@cat baseline-bandit.json; printf "\n^ The new baseline ^^ ^^ ^^ ^^ ^^ ^^. OK?\n"
 
 .PHONY: fixtures
@@ -82,7 +83,7 @@ clean: clocal
 	@rm -f `find . -type f -name '.*~' `
 	@rm -rf .cache htmlcov *.egg-info build dist/*
 	@rm -f .coverage .coverage.* *.log
-	python setup.py clean
+	@echo skipping not yet working pip uninstall $(package)
 	@rm -fr site/*
 
 .PHONY: name
