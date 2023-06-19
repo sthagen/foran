@@ -33,7 +33,7 @@ def test_generate_report_list_dash_single():
 @pytest.mark.skip()
 def test_generate_report_list_default_two():
     with warnings.catch_warnings():
-        warnings.simplefilter("error")
+        warnings.simplefilter('error')
         assert generate_report_list('foo:', True, ['bar', 'baz']) == ['foo:\n', ' * bar\n * baz\n']
 
 
