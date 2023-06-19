@@ -2,8 +2,8 @@
     {
         "key": "gitpython",
         "package_name": "GitPython",
-        "installed_version": "3.1.30",
-        "required_version": "3.1.30",
+        "installed_version": "3.1.31",
+        "required_version": "3.1.31",
         "dependencies": [
             {
                 "key": "gitdb",
@@ -25,8 +25,8 @@
     {
         "key": "typer",
         "package_name": "typer",
-        "installed_version": "0.7.0",
-        "required_version": "0.7.0",
+        "installed_version": "0.8.0",
+        "required_version": "0.8.0",
         "dependencies": [
             {
                 "key": "click",
