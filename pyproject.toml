@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "foran"
-version = "2022.12.7"
+version = "2023.6.19"
 description = "In front or behind (Danish: foran eller bagved)? Answering the question if a local repository status is in front of or behind its remote."
 readme = "README.md"
 authors = [{ name = "Stefan Hagen", email = "stefan@hagen.link" }]
@@ -15,12 +15,13 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.9",
 ]
 keywords = ["git", "developer-tools"]
 dependencies = [
     "GitPython >= 3.1.31",
-    "typer >= 0.7.0",
+    "typer >= 0.9.0",
 ]
 requires-python = ">=3.9"
 
@@ -44,7 +45,7 @@ exclude = ["test*"]
 [tool.black]
 line-length = 120
 skip-string-normalization = true
-target-version = ["py310", "py311"]
+target-version = ["py39", "py310", "py311", "py312"]
 
 [tool.coverage.run]
 branch = true
