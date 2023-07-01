@@ -11,6 +11,7 @@ Third party dependencies are documented in the folder [third-party](docs/third-p
 [![wheel](https://img.shields.io/pypi/wheel/foran.svg?style=flat)](https://pypi.python.org/pypi/foran/)
 [![supported-versions](https://img.shields.io/pypi/pyversions/foran.svg?style=flat)](https://pypi.python.org/pypi/foran/)
 [![supported-implementations](https://img.shields.io/pypi/implementation/foran.svg?style=flat)](https://pypi.python.org/pypi/foran/)
+[![maintenance-status](https://img.shields.io/github/commit-activity/y/sthagen/foran.svg?style=flat)](https://git.sr.ht/~sthagen/foran/log)
 
 The English "in front" may translate to the Danish "foran".
 
