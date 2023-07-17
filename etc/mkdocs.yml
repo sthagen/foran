@@ -1,5 +1,7 @@
 site_name: Foran
 site_description: "In front or behind (Danish: foran eller bagved)? Answering the question if a local repository status is in front of or behind its remote."
+docs_dir: ../docs
+site_dir: ../site
 
 theme:
   name: 'material'
