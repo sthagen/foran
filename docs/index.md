@@ -7,7 +7,7 @@ In front or behind (Danish: foran eller bagved)? Answering the question if a loc
 Third party dependencies are documented in the folder [third-party](third-party/README.md).
 
 [![version](https://img.shields.io/pypi/v/foran.svg?style=flat)](https://pypi.python.org/pypi/foran/)
-[![downloads](https://pepy.tech/badge/foran/month)](https://pepy.tech/project/foran)
+[![downloads](https://static.pepy.tech/badge/foran/month)](https://pepy.tech/project/foran)
 [![wheel](https://img.shields.io/pypi/wheel/foran.svg?style=flat)](https://pypi.python.org/pypi/foran/)
 [![supported-versions](https://img.shields.io/pypi/pyversions/foran.svg?style=flat)](https://pypi.python.org/pypi/foran/)
 [![supported-implementations](https://img.shields.io/pypi/implementation/foran.svg?style=flat)](https://pypi.python.org/pypi/foran/)
