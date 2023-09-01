@@ -1,8 +1,8 @@
 # Third Party Dependencies
 
 <!--[[[fill sbom_sha256()]]]-->
-The [SBOM in CycloneDX v1.4 JSON format](https://git.sr.ht/~sthagen/foran/blob/default/etc/sbom/cdx.json) with SHA256 checksum ([e37749f6 ...](https://git.sr.ht/~sthagen/foran/blob/default/etc/sbom/cdx.json.sha256 "sha256:e37749f6addfdf168f97d040aed9ce80e56e091e84cc9be3128a98a04243e355")).
-<!--[[[end]]] (checksum: f9063fc8f5ed543542a78f78df75845c)-->
+The [SBOM in CycloneDX v1.4 JSON format](https://git.sr.ht/~sthagen/foran/blob/default/etc/sbom/cdx.json) with SHA256 checksum ([ac5ecd0f ...](https://git.sr.ht/~sthagen/foran/blob/default/etc/sbom/cdx.json.sha256 "sha256:ac5ecd0f0accdd9ac9eb13c032942be72684d9b65802ea7e579c0b0c39f7753d")).
+<!--[[[end]]] (checksum: cda310d0c4ae7d9835c5129875b5f2f5)-->
 ## Licenses 
 
 JSON files with complete license info of: [direct dependencies](direct-dependency-licenses.json) | [all dependencies](all-dependency-licenses.json)
@@ -12,9 +12,9 @@ JSON files with complete license info of: [direct dependencies](direct-dependenc
 <!--[[[fill direct_dependencies_table()]]]-->
 | Name                                                           | Version                                              | License     | Author                         | Description (from packaging data)                                    |
 |:---------------------------------------------------------------|:-----------------------------------------------------|:------------|:-------------------------------|:---------------------------------------------------------------------|
-| [GitPython](https://github.com/gitpython-developers/GitPython) | [3.1.32](https://pypi.org/project/GitPython/3.1.32/) | BSD License | Sebastian Thiel, Michael Trier | GitPython is a Python library used to interact with Git repositories |
+| [GitPython](https://github.com/gitpython-developers/GitPython) | [3.1.33](https://pypi.org/project/GitPython/3.1.33/) | BSD License | Sebastian Thiel, Michael Trier | GitPython is a Python library used to interact with Git repositories |
 | [typer](https://github.com/tiangolo/typer)                     | [0.9.0](https://pypi.org/project/typer/0.9.0/)       | MIT License | Sebastián Ramírez              | Typer, build great CLIs. Easy to code. Based on Python type hints.   |
-<!--[[[end]]] (checksum: 150563c7afc10fd079a1033767a29bf6)-->
+<!--[[[end]]] (checksum: c014cbb350e037f3097f227584b90b88)-->
 
 ### Indirect Dependencies
 
@@ -40,11 +40,11 @@ Base graphviz file in dot format: [Trees of the direct dependencies](package-dep
 
 <!--[[[fill dependency_tree_console_text()]]]-->
 ````console
-GitPython==3.1.32
+GitPython==3.1.33
 └── gitdb [required: >=4.0.1,<5, installed: 4.0.10]
     └── smmap [required: >=3.0.1,<6, installed: 5.0.0]
 typer==0.9.0
 ├── click [required: >=7.1.1,<9.0.0, installed: 8.1.5]
 └── typing-extensions [required: >=3.7.4.3, installed: 4.7.1]
 ````
-<!--[[[end]]] (checksum: c0f0f685987e01cc04fe0e625d6dba2d)-->
+<!--[[[end]]] (checksum: e8ff22663e0262b6de943189e51f60cd)-->
