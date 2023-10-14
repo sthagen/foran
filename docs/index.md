@@ -2,7 +2,9 @@
 
 In front or behind (Danish: foran eller bagved)? Answering the question if a local repository status is in front of or behind its remote.
 
-[License: MIT](https://git.sr.ht/~sthagen/foran/tree/default/item/LICENSE)
+[License: MIT](https://git.sr.ht/~sthagen/foran/tree/default/item/LICENSE) |
+[Country of origin: Switzerland](https://git.sr.ht/~sthagen/foran/tree/default/item/COUNTRY-OF-ORIGIN) |
+[Export control classification number(ECCN): EAR99](https://git.sr.ht/~sthagen/foran/tree/default/item/EXPORT-CONTROL-CLASSIFICATION-NUMBER)
 
 Third party dependencies are documented in the folder [third-party](third-party/README.md).
 
