@@ -2,18 +2,15 @@
 
 In front or behind (Danish: foran eller bagved)? Answering the question if a local repository status is in front of or behind its remote.
 
-[License: MIT](https://git.sr.ht/~sthagen/foran/tree/default/item/LICENSE) |
-[Country of origin: Switzerland](https://git.sr.ht/~sthagen/foran/tree/default/item/COUNTRY-OF-ORIGIN) |
-[Export control classification number(ECCN): EAR99](https://git.sr.ht/~sthagen/foran/tree/default/item/EXPORT-CONTROL-CLASSIFICATION-NUMBER)
+[![license](badges/license-spdx-mit.svg)](https://git.sr.ht/~sthagen/foran/tree/default/item/LICENSE)
+[![Country of Origin](badges/country-of-origin-name-switzerland-neutral.svg)](https://git.sr.ht/~sthagen/foran/tree/default/item/COUNTRY-OF-ORIGIN)
+[![Export Classification Control Number (ECCN)](badges/export-control-classification-number_eccn-ear99-neutral.svg)](https://git.sr.ht/~sthagen/foran/tree/default/item/EXPORT-CONTROL-CLASSIFICATION-NUMBER)
+[![Configuration](badges/configuration-sbom.svg)](third-party/index.html)
 
-Third party dependencies are documented in the folder [third-party](third-party/README.md).
-
-[![version](https://img.shields.io/pypi/v/foran.svg?style=flat)](https://pypi.python.org/pypi/foran/)
-[![downloads](https://static.pepy.tech/badge/foran/month)](https://pepy.tech/project/foran)
-[![wheel](https://img.shields.io/pypi/wheel/foran.svg?style=flat)](https://pypi.python.org/pypi/foran/)
-[![supported-versions](https://img.shields.io/pypi/pyversions/foran.svg?style=flat)](https://pypi.python.org/pypi/foran/)
-[![supported-implementations](https://img.shields.io/pypi/implementation/foran.svg?style=flat)](https://pypi.python.org/pypi/foran/)
-[![maintenance-status](https://img.shields.io/github/commit-activity/y/sthagen/foran.svg?style=flat)](https://git.sr.ht/~sthagen/foran/log)
+[![Version](https://img.shields.io/pypi/v/foran.svg?style=flat)](https://pypi.python.org/pypi/foran/)
+[![Downloads](https://static.pepy.tech/badge/foran/month)](https://pepy.tech/project/foran)
+[![Supported Versions](https://img.shields.io/pypi/pyversions/foran.svg?style=flat)](https://pypi.python.org/pypi/foran/)
+[![Maintenance Status](https://img.shields.io/github/commit-activity/y/sthagen/foran.svg?style=flat)](https://git.sr.ht/~sthagen/foran/log)
 
 The English "in front" may translate to the Danish "foran".
 
