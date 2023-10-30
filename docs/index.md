@@ -10,7 +10,7 @@ In front or behind (Danish: foran eller bagved)? Answering the question if a loc
 [![Version](https://img.shields.io/pypi/v/foran.svg?style=flat)](https://pypi.python.org/pypi/foran/)
 [![Downloads](https://static.pepy.tech/badge/foran/month)](https://pepy.tech/project/foran)
 [![Supported Versions](https://img.shields.io/pypi/pyversions/foran.svg?style=flat)](https://pypi.python.org/pypi/foran/)
-[![Maintenance Status](https://img.shields.io/github/commit-activity/y/sthagen/foran.svg?style=flat)](https://git.sr.ht/~sthagen/foran/log)
+[![Maintenance Status](docs/badges/downloads-per-month.svg)](https://git.sr.ht/~sthagen/foran/log)
 
 The English "in front" may translate to the Danish "foran".
 
