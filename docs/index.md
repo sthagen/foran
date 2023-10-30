@@ -8,7 +8,7 @@ In front or behind (Danish: foran eller bagved)? Answering the question if a loc
 [![Configuration](badges/configuration-sbom.svg)](third-party/index.html)
 
 [![Version](https://img.shields.io/pypi/v/foran.svg?style=flat)](https://pypi.python.org/pypi/foran/)
-[![Downloads](https://static.pepy.tech/badge/foran/month)](https://pepy.tech/project/foran)
+[![Downloads](docs/badges/downloads-per-month.svg)](https://pepy.tech/project/foran)
 [![Supported Versions](https://img.shields.io/pypi/pyversions/foran.svg?style=flat)](https://pypi.python.org/pypi/foran/)
 [![Maintenance Status](docs/badges/commits-per-year.svg)](https://git.sr.ht/~sthagen/foran/log)
 
