@@ -1,0 +1,18 @@
+{
+  "foran": {
+    "version": "7.3.2",
+    "timestamp": "2023-12-02T15:17:53.409146",
+    "branch_coverage": true,
+    "show_contexts": true,
+    "covered_lines": 156,
+    "num_statements": 157,
+    "percent_covered": 98.99497487437186,
+    "percent_covered_display": "98.99",
+    "missing_lines": 1,
+    "excluded_lines": 0,
+    "num_branches": 42,
+    "num_partial_branches": 1,
+    "covered_branches": 41,
+    "missing_branches": 1
+  }
+}
