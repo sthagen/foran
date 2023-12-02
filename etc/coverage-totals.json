@@ -1,7 +1,7 @@
 {
   "foran": {
-    "version": "7.3.2",
-    "timestamp": "2023-12-02T15:17:53.409146",
+    "coverage_tool_version": "7.3.2",
+    "timestamp": "2023-12-02 15:54:11 +00:00",
     "branch_coverage": true,
     "show_contexts": true,
     "covered_lines": 156,
@@ -13,6 +13,25 @@
     "num_branches": 42,
     "num_partial_branches": 1,
     "covered_branches": 41,
-    "missing_branches": 1
+    "missing_branches": 1,
+    "node_id": "c79891e5-aabf-3a83-95b9-588edcd8327f",
+    "nfiles": 6,
+    "files": [
+      "foran/__init__.py",
+      "foran/cli.py",
+      "foran/foran.py",
+      "foran/render.py",
+      "foran/report.py",
+      "foran/status.py"
+    ],
+    "blake3": "e98041bc83bba95cc275b87f0a826e4fc805af4e8dbe08edf7a1ea0d3323c760",
+    "blake2": "afb4757e6558b219bca05c4b5cdd9a8deaf4dbd235acde6def44a3b96646f3058cb7fb8867f7436c16901ee5df597c31e88d266dd0ea01f2757d50d66c1996ce",
+    "sha512": "529407358509b9e9516e87f8b6ea62db63f7ceef8aada37c1232e4f9e1851de20c3f9c650a7032a6f7f50c3625cdde642665b24bd666bf96b04412df8058309c",
+    "sha384": "fddecdf2c6a05a1b77b634ff7cf80280d4794c3749d26477998bb962c161c0b8c66808c4c397bef66ce10fb6707087f2",
+    "sha256": "d97ff8321587a491795007fccdc468e927158b28e997148cb836c63c926908f8",
+    "sha1": "8558fcea6b6dc42effc341dc0b68f6e2e228180d",
+    "md5": "07f6be80c5aa807e5c675ca438a43c57",
+    "python_version": "3.10.12",
+    "entropy": 4.889718
   }
 }
