@@ -7,6 +7,7 @@ name = "foran"
 version = "2023.6.19"
 description = "In front or behind (Danish: foran eller bagved)? Answering the question if a local repository status is in front of or behind its remote."
 readme = "README.md"
+license = {file = "LICENSE"}
 authors = [{ name = "Stefan Hagen", email = "stefan@hagen.link" }]
 maintainers = [{ name = "Stefan Hagen", email = "stefan@hagen.link" }]
 classifiers = [
