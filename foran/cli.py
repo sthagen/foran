@@ -1,4 +1,5 @@
 """Commandline API gateway for foran."""
+
 import pathlib
 import sys
 from typing import List, Union

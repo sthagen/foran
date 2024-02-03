@@ -1,4 +1,5 @@
 """In front or behind (Foran eller bagved)? status structure."""
+
 import datetime as dti
 
 from git.repo import Repo

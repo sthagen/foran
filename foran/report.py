@@ -1,4 +1,5 @@
 """In front or behind (Foran eller bagved)? reporting interface."""
+
 import pathlib
 from enum import Enum, auto
 from typing import List, Tuple

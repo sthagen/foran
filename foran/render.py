@@ -1,4 +1,5 @@
 """In front or behind (Foran eller bagved)? rendering interface for templates."""
+
 from enum import Enum, auto
 
 
