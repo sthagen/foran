@@ -21,6 +21,7 @@
       "last_month": -1,
       "last_week": -1
     },
+    "dynamic": null,
     "home_page": "",
     "keywords": "git,developer-tools",
     "license": "",
@@ -37,6 +38,7 @@
       "Source-Code": "https://git.sr.ht/~sthagen/foran",
       "Test-Coverage": "https://codes.dilettant.life/coverage/foran"
     },
+    "provides_extra": null,
     "release_url": "https://pypi.org/project/foran/2023.6.19/",
     "requires_dist": [
       "GitPython (>=3.1.31)",
