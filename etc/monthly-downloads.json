@@ -2,11 +2,6 @@
   "data": [
     {
       "category": "3.10",
-      "date": "2024-07",
-      "downloads": 8
-    },
-    {
-      "category": "3.10",
       "date": "2024-08",
       "downloads": 262
     },
@@ -33,12 +28,7 @@
     {
       "category": "3.10",
       "date": "2025-01",
-      "downloads": 244
-    },
-    {
-      "category": "3.11",
-      "date": "2024-07",
-      "downloads": 13
+      "downloads": 263
     },
     {
       "category": "3.11",
@@ -68,12 +58,7 @@
     {
       "category": "3.11",
       "date": "2025-01",
-      "downloads": 505
-    },
-    {
-      "category": "3.12",
-      "date": "2024-07",
-      "downloads": 8
+      "downloads": 513
     },
     {
       "category": "3.12",
@@ -103,17 +88,12 @@
     {
       "category": "3.12",
       "date": "2025-01",
-      "downloads": 220
+      "downloads": 228
     },
     {
       "category": "3.13",
       "date": "2025-01",
       "downloads": 2
-    },
-    {
-      "category": "3.8",
-      "date": "2024-07",
-      "downloads": 8
     },
     {
       "category": "3.8",
@@ -143,7 +123,7 @@
     {
       "category": "3.8",
       "date": "2025-01",
-      "downloads": 216
+      "downloads": 224
     },
     {
       "category": "3.9",
@@ -188,7 +168,7 @@
     {
       "category": "null",
       "date": "2025-01",
-      "downloads": 275
+      "downloads": 290
     }
   ],
   "package": "foran",
