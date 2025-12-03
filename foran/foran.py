@@ -36,12 +36,12 @@ def local_commits(repo: Repo, status: Status) -> None:
 
 def local_staged(repo: Repo, status: Status) -> None:
     """Truly"""
-    status.local_staged = [item.a_path for item in repo.index.diff('HEAD')]
+    status.local_staged = [item.a_path for item in repo.index.diff('HEAD')]  # type: ignore
 
 
 def local_files(repo: Repo, status: Status) -> None:
     """Sure"""
-    status.local_files = [item.a_path for item in repo.index.diff(None)]
+    status.local_files = [item.a_path for item in repo.index.diff(None)]  # type: ignore
 
 
 def main(argv: Union[List[str], None] = None) -> int:
